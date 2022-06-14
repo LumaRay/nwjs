@@ -1,0 +1,9 @@
+{
+  "name" : "clear",
+  "main" : "index.html",
+  "version" : "0.0.1",
+  "window" : {
+    "width" : 300,
+    "height" : 150
+  }
+}

@@ -1,0 +1,7 @@
+div#load-operation-zone {
+    height: 70px;
+    border: 3px dashed lightgray;
+    padding-top: 50px;
+    text-align: center;
+    color: lightgray;
+}

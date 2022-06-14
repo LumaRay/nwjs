@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>123</title>
+  <script type="text/javascript" src="js/zip/jszip.min.js"></script>
+  <script type="text/javascript" src="js/zip/jszip-utils.js"></script>
+  <script type="text/javascript" src="js/zip/FileSaver.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+  <script type="text/javascript" src="js/jsrsasign/jsrsasign-all-min.js"></script>
+  <!--<script type="text/javascript" src="js/pkijs/TSP_req_complex_example.js"></script>-->
+  <script type="text/javascript" src="js/opentimestamps/opentimestamps.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--<b id="nw_version"></b>-->
+  <label for="operations">Операции:</label><br>
+  <select class="" name="" id="categories">
+    <option value="">Выберите категорию...</option>
+  </select>
+  <select class="" name="" id="subcategories">
+  </select>
+  <select class="" name="" id="operations">
+  </select>
+  <br/>
+  <label for="load-operation">Загрузить шаблон операции: </label>
+  <input type="file" id="load-operation" multiple/>
+  <div id="load-operation-zone">Перетащите сюда файлы</div>
+  <hr/>
+  <form id="form-operation" onsubmit="return false"></form>
+  <script type="text/javascript">
+
+    var _isRunningInFramework = window.process !== undefined;
+    //alert(window);
+    //alert(window.process);
+    //alert(window.process.type);
+    //alert(_isRunningInFramework);
+    var _categories = {};
+    var _zip = null;
+
+    var _el_categories = document.getElementById('categories');
+    var _el_subcategories = document.getElementById('subcategories');
+    var _el_operations = document.getElementById('operations');
+    var _el_load_operation = document.getElementById('load-operation');
+    var _el_load_operation_zone = document.getElementById('load-operation-zone');
+    var _el_form = document.getElementById('form-operation');
+
+    // Load and parse operations list
+    document.addEventListener('DOMContentLoaded', function () {
+      loadjs('list.js', ParseOperationsList);
+    });
+    
+    //var os = require('os');
+	//	document.getElementById('nw_version').innerHTML = 'You are running on '+ os.platform();
+		
+  </script>
+</body>
+</html>
